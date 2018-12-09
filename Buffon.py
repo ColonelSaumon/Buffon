@@ -24,13 +24,10 @@ def Buffon(n, L, d, a) :
         # On trouve sa position selon les fentes
         m = np.floor(x/L)
         # On recupere sa position r
-        r = np.min([x - m*L, (m+1)*L - x])
         # On verifie sa position
         #ay = a*np.sin(phi)/2
         ax= a*np.cos(phi)/2
-        if r == 0 :
-            k += 1
-        elif x + ax < (m + 1)*L and x - ax > m*L :
+        if x + ax < (m + 1)*L and x - ax > m*L :
             pass
         else :
             k += 1
